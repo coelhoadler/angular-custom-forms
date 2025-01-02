@@ -1,0 +1,16 @@
+<h1>Envie seu feedback</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Sua avaliação:
+      <app-star-rating formControlName="rating"></app-star-rating>
+    </label>
+  </div>
+  <div>
+    <label>Quer informar um comentário?</label>
+    <input formControlName="comment" />
+  </div>
+  <br><br>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
